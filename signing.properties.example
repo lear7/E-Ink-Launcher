@@ -1,0 +1,5 @@
+# Copy to signing.properties (gitignored) and fill in real values.
+storeFile=kp.keystore.jks
+storePassword=your-store-password
+keyAlias=your-key-alias
+keyPassword=your-key-password

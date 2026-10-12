@@ -1,0 +1,89 @@
+//noinspection GradleDynamicVersion
+apply plugin: 'com.android.application'
+//apply plugin: 'com.jakewharton.hugo'
+//apply from: '../config.gradle'
+
+android {
+    compileSdkVersion 31
+
+    signingConfigs {
+        release {
+            def signingPropsFile = rootProject.file('signing.properties')
+            if (signingPropsFile.exists()) {
+                def signingProps = new Properties()
+                signingProps.load(new FileInputStream(signingPropsFile))
+                storeFile file(signingProps['storeFile'] ?: 'kp.keystore.jks')
+                storePassword signingProps['storePassword']
+                keyAlias signingProps['keyAlias']
+                keyPassword signingProps['keyPassword']
+            }
+        }
+    }
+
+    defaultConfig {
+        applicationId "cn.modificator.launcher"
+        minSdkVersion 14
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 28
+        versionCode 30
+        versionName "0.1.8.7"
+        signingConfig signingConfigs.release
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'proguard-project.txt'
+        exclude 'project.properties'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/androidx*'
+        exclude 'META-INF/spring*'
+        exclude 'META-INF/proguard/*'
+    }
+
+    // 自定义输出配置
+    applicationVariants.all { variant ->
+        def outputPrefix = variant.productFlavors.collect { it.name }.join("_")
+        variant.outputs.all { output ->
+            if (outputFileName != null && outputFileName.endsWith('.apk')) {
+                if (variant.buildType.name == "debug") {
+                    outputFileName = "E-Ink-Launcher-${variant.buildType.name}.apk"
+                } else {
+                    outputFileName = "E-Ink-Launcher-${variant.buildType.name}_${variant.versionName}.apk"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.7.0'
+    implementation 'org.apache.ftpserver:ftplet-api:1.1.0'
+    implementation 'org.apache.ftpserver:ftpserver-core:1.1.0'
+}
+

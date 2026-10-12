@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/toSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?android:selectableItemBackground"
+                android:clickable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_more" />
+
+            <TextView
+                android:id="@+id/pageStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1/1"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                tools:text="15:30" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/batteryStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充电中"
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+
+                <cn.modificator.launcher.widgets.BatteryView
+                    android:id="@+id/batteryProgress"
+                    style="@null"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="5dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/ic_battery"
+                    android:text="100"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/lastPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Page"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/nextPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next Page"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <cn.modificator.launcher.widgets.EInkLauncherView
+        android:id="@+id/mList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/deleteFinish"
+        style="@android:style/Widget.Holo.ActionButton.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="5dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/app_manager_finish"
+        android:textSize="18sp"
+        android:visibility="gone" />
+</LinearLayout>

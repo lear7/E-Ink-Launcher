@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">E-Ink Launcher</string>
+    <string name="file_manager">File Manager</string>
+
+    <string name="empty_directory_hint">Empty directory</string>
+    <string name="start_path_name">Device</string>
+    <string name="type_archive">Archive</string>
+    <string name="type_certificate">Certificate</string>
+    <string name="type_directory">Directory</string>
+    <string name="type_document">File</string>
+    <string name="type_drawing">Picture</string>
+    <string name="type_excel">Spreadsheet</string>
+    <string name="type_image">Image</string>
+    <string name="type_music">Music</string>
+    <string name="type_video">Video</string>
+    <string name="type_pdf">PDF document</string>
+    <string name="type_power_point">Presentation</string>
+    <string name="type_word">Document</string>
+    <string name="type_apk">APK</string>
+
+    <string name="setting_cloud_manager_on">Cloud Manager - ON</string>
+    <string name="setting_cloud_manager_off">Cloud Manager - OFF</string>
+    <string name="setting_cloud_manager_wifi_off">Cloud Manager\n -- No WIFI connect</string>
+    <string name="battery_status_low_battery">Low power</string>
+    <string name="setting_show_divider">Show Divider</string>
+    <string name="setting_hide_divider">Hide Divider</string>
+    <string name="setting_set_font_size">Change Font Size</string>
+    <string name="setting_apps_manager">Apps Manager</string>
+    <string name="setting_open_device_manager">Open Device Manager</string>
+    <string name="setting_column_icons">Column</string>
+    <string name="setting_row_icons">"Row"</string>
+    <string name="toast_need_wifi_connect">Please connect Wlan!</string>
+    <string name="app_manager_finish">Done</string>
+    <string name="battery_heat">Battery Overheat</string>
+    <string name="battery_unknown">Unknown</string>
+    <string name="battery_charging">Charging</string>
+    <string name="battery_low">Low Battery</string>
+    <string name="battery_full">Full</string>
+    <string name="battery_wtf">WTF?</string>
+
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_hide">Hide</string>
+    <string name="dialog_uninstall">Uninstall</string>
+    <string name="dialog_pkg_name">Package Name: %s</string>
+    <string name="dialog_close">Close</string>
+
+    <string name="wifi_status_off">WiFi OFF</string>
+    <string name="wifi_status_closing">WiFi closing</string>
+    <string name="wifi_status_opening">WiFi opening</string>
+    <string name="wifi_status_on">WiFi ON</string>
+    <string name="wifi_status_connected">WiFi connected:%s</string>
+    <string name="wifi_status_connecting">WiFi connecting</string>
+    <string name="wifi_status_disconnected">WiFi disconnected</string>
+    <string name="wifi_status_disconnecting">WiFi disconnecting</string>
+
+    <string name="item_lockscreen">Lock Screen</string>
+    <string name="launch_failed">Launch failed</string>
+    <string name="launch_devicemanager_failed">Please open Device Policy Manager and enable E-Ink Launcher</string>
+    <string name="launch_devicemanager">Open Device Policy Manager</string>
+
+    <string-array name="power_menu">
+        <item>Power-off</item>
+        <item>Reboot</item>
+    </string-array>
+    <string name="power_title">You could use power now.</string>
+    <string name="setting_help_and_about">Help &amp; About</string>
+    <string name="path">Path</string>
+    <string name="default_path_setting">Default path</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="parent_folder">Parent folder</string>
+    <string name="exit">Exit</string>
+    <string name="delete">Delete</string>
+    <string name="show_status_bar">Show StatusBar</string>
+    <string name="show_wifi_name">Show Wifi Name</string>
+    <string name="show_custom_icon">Show custom icon</string>
+    <string name="notification_click_back_launcher">Click here, back to Launcher</string>
+    <string name="app_show_name">App name</string>
+    <string name="app_sort_name">App sort</string>
+</resources>
